@@ -1,0 +1,14 @@
+div.card {
+  position: relative;
+  background-color: #aaa69d;
+  aspect-ratio: 2/1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+div.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
