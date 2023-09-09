@@ -1,0 +1,53 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Hikes server
+servers:
+  - url: http://localhost:8080/
+paths:
+  /hikes:
+    get:
+      summary: List all hikes
+      operationId: listHikes
+      tags:
+        - hike
+      responses:
+        200:
+          description: An array of hikes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HikesResponse'
+components:
+  schemas:
+    HikesResponse:
+      type: object
+      required:
+        - hikes
+      properties:
+        hikes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Hike'
+    Hike:
+      type: object
+      required:
+        - id
+        - name
+        - length
+        - unit
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        length:
+          example: 4.8
+          type: number
+          format: double
+        unit:
+          type: string
+          enum:
+            - Kilometer
+            - Mile
