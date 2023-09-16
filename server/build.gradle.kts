@@ -49,7 +49,7 @@ tasks.withType<KotlinCompile> {
         jvmTarget = "17"
     }
 }
-val spec = "$rootDir/src/main/resources/api.yaml"
+val spec = "$rootDir/api.yaml"
 openApiGenerate {
     generatorName.set("kotlin-spring")
     inputSpec.set(spec)

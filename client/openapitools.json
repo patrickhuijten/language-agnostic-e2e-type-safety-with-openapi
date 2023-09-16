@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.0.0",
+    "generators": {
+      "@trackmyhikes/client": {
+        "generatorName": "typescript-fetch",
+        "output": "#{cwd}/node_modules/@trackmyhikes/client",
+        "glob": "../server/api.yaml",
+        "additionalProperties": {
+          "enumPropertyNaming": "original",
+          "disallowAdditionalPropertiesIfNotPresent": false,
+          "npmName": "@trackmyhikes/client"
+        }
+      }
+    }
+  }
+}

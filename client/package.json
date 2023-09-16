@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "openapi:generate": "npx @openapitools/openapi-generator-cli generate && cd node_modules/@trackmyhikes/client && yarn build"
   },
   "dependencies": {
+    "@trackmyhikes/client": "file:node_modules/@trackmyhikes/client",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",

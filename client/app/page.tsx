@@ -1,9 +1,12 @@
 import styles from "./page.module.css";
 import { Card } from "./card";
+import { HikeApi } from "@trackmyhikes/client";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const hikes = await getHikes();
-  console.log(hikes);
+  const { hikes } = await getHikes();
+
   return (
     <main className={styles.main}>
       <section className={styles.title}>
@@ -19,8 +22,6 @@ export default async function Home() {
 }
 
 const getHikes = async () => {
-  // const data = await fetch("http://localhost:8080/hikes");
-  const data = await fetch("https://picsum.photos/v2/list");
-  console.table(data);
-  return await data.json();
+  const api = new HikeApi();
+  return await api.listHikes();
 };

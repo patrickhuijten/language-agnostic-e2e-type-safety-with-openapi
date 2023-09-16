@@ -1,9 +1,13 @@
 div.card {
+  --card-bg: #aaa69d;
+  --card-text-color: #333;
+  --transition-duration: 300ms;
   position: relative;
-  background-color: #aaa69d;
+  background-color: var(--card-bg);
   aspect-ratio: 2/1;
   border-radius: var(--border-radius);
   overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 div.card img {
@@ -11,4 +15,43 @@ div.card img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: filter var(--transition-duration);
+  will-change: filter;
+}
+
+div.card:hover img {
+  filter: blur(8px) brightness(0.8);
+}
+
+div.card:hover footer.metadata {
+  bottom: 0;
+  transform: translateY(0);
+}
+
+div.card footer.metadata {
+  display: grid;
+  grid-template-rows: 1fr max-content;
+
+  transition: transform var(--transition-duration);
+  will-change: transform;
+
+  position: absolute;
+  transform: translateY(100%);
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 100%;
+  padding: 0.5rem;
+
+  background-color: var(--card-bg);
+  color: var(--card-text-color);
+
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+div.attributes {
+  display: flex;
+  justify-content: space-between;
 }

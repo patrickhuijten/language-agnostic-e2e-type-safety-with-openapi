@@ -36,6 +36,7 @@ components:
         - name
         - length
         - unit
+        - thumbnail
       properties:
         id:
           type: integer
@@ -51,3 +52,5 @@ components:
           enum:
             - Kilometer
             - Mile
+        thumbnail:
+          type: string
