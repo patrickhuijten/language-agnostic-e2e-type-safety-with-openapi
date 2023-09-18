@@ -16,7 +16,7 @@ export const Card = ({ hike }: { hike: Hike }) => {
     <div className={styles.card}>
       <Image src={hike.thumbnail} alt={hike.name} width={400} height={300} />
       <footer className={styles.metadata}>
-        <div />
+        <div></div>
         <div className={styles.attributes}>
           <span>{hike.name}</span>
           <span>
