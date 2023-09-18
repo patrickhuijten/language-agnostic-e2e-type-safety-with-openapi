@@ -54,3 +54,14 @@ components:
             - Mile
         thumbnail:
           type: string
+        stats:
+          type: object
+          properties:
+            elevationIncrease:
+              $ref: '#/components/schemas/ElevationChange'
+            elevationDecrease:
+              $ref: '#/components/schemas/ElevationChange'
+    ElevationChange:
+      type: number
+      format: double
+      example: 122.3
