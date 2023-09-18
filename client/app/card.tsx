@@ -1,6 +1,7 @@
 import { Hike } from "@trackmyhikes/client";
 import styles from "./card.module.css";
 import Image from "next/image";
+import { Fragment } from "react";
 
 const getShortDistanceUnit = (unit: Hike["unit"]) => {
   switch (unit) {
