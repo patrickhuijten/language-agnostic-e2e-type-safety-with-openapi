@@ -12,9 +12,15 @@ const getShortDistanceUnit = (unit: Hike["unit"]) => {
   }
 };
 
-export const Card = ({ hike }: { hike: Hike }) => {
+export const Card = ({
+  hike,
+  onClick,
+}: {
+  hike: Hike;
+  onClick: () => void;
+}) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={onClick}>
       <Image src={hike.thumbnail} alt={hike.name} width={400} height={300} />
       <footer className={styles.metadata}>
         <div></div>
