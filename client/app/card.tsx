@@ -1,3 +1,5 @@
+"use client";
+
 import { Hike } from "@trackmyhikes/client";
 import styles from "./card.module.css";
 import Image from "next/image";
@@ -12,15 +14,9 @@ const getShortDistanceUnit = (unit: Hike["unit"]) => {
   }
 };
 
-export const Card = ({
-  hike,
-  onClick,
-}: {
-  hike: Hike;
-  onClick: () => void;
-}) => {
+export const Card = ({ hike }: { hike: Hike }) => {
   return (
-    <div className={styles.card} onClick={onClick}>
+    <div className={styles.card} onClick={() => onClickHandler(hike.id)}>
       <Image src={hike.thumbnail} alt={hike.name} width={400} height={300} />
       <footer className={styles.metadata}>
         <div></div>
@@ -33,4 +29,8 @@ export const Card = ({
       </footer>
     </div>
   );
+};
+
+const onClickHandler = (hikeId: number) => {
+  alert(`Hike ID: ${hikeId}`);
 };
