@@ -31,6 +31,25 @@ export const Card = ({ hike }: { hike: Hike }) => {
   );
 };
 
-const onClickHandler = (hikeId: number) => {
-  alert(`Hike ID: ${hikeId}`);
+const onClickHandler = async (hikeId: number) => {
+  // const hike = await getHike(hikeId);
+  const hike = { id: hikeId };
+  alert(JSON.stringify(hike, null, 2));
 };
+
+// const getHike = async (hikeId: number) => {
+//   const api = new HikeApi();
+//   try {
+//     const { hike } = await api.getHike({ hikeId });/
+//     return hike;
+//   } catch (err) {
+//     const hike: Hike = {
+//       id: 1,
+//       name: "Test Hike",
+//       length: 10,
+//       unit: "Kilometer",
+//       thumbnail: "https://via.placeholder.com/400x300.png?text=Test+Hike",
+//     };
+//     return hike;
+//   }
+// };
