@@ -2,6 +2,8 @@
 
 This repository contains the source for a public talk I gave at Advanced JS meetup Amsterdam on September 20 2023.
 
+![screenshot](./screenshot.png)
+
 ## Software used
 
 In this repository you will find source files for a next.js app router project on the UI and a Kotlin Spring starter project for the server.
