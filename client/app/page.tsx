@@ -14,7 +14,7 @@ export default async function Home() {
       </section>
       <section className={styles.grid}>
         {hikes.map((hike) => (
-          <Card key={hike.id} hike={hike} />
+          <Card key={hike.id} hike={hike} onClick={() => void {}} />
         ))}
       </section>
     </main>
@@ -24,4 +24,9 @@ export default async function Home() {
 const getHikes = async () => {
   const api = new HikeApi();
   return await api.listHikes();
+};
+
+const getHike = async (hikeId: number) => {
+  const api = new HikeApi();
+  return await api.getHike({ hikeId });
 };
