@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "openapi:generate": "npx @openapitools/openapi-generator-cli generate && cd node_modules/@trackmyhikes/client && yarn build"
+    "openapi:generate": "npx @openapitools/openapi-generator-cli generate && cd @trackmyhikes/client && npm run build"
   },
   "dependencies": {
-    "@trackmyhikes/client": "file:node_modules/@trackmyhikes/client",
+    "@trackmyhikes/client": "file:@trackmyhikes/client",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -20,5 +20,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.4.26"
   }
 }
