@@ -18,6 +18,26 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HikesResponse'
+#  /hikes/{hikeId}:
+#    get:
+#      summary: Get a specific hike
+#      operationId: getHike
+#      tags:
+#        - hike
+#      parameters:
+#        - name: hikeId
+#          in: path
+#          required: true
+#          schema:
+#            type: integer
+#            format: int64
+#      responses:
+#        200:
+#          description: A specific hike
+#          content:
+#            application/json:
+#              schema:
+#                $ref: '#/components/schemas/HikeResponse'
 components:
   schemas:
     HikesResponse:
@@ -29,6 +49,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Hike'
+#    HikeResponse:
+#      type: object
+#      required:
+#        - hike
+#      properties:
+#        hike:
+#          $ref: '#/components/schemas/Hike'
     Hike:
       type: object
       required:
