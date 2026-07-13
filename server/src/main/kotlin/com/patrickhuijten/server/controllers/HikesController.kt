@@ -3,6 +3,7 @@ package com.patrickhuijten.server.controllers
 import org.openapitools.api.HikesApi
 import org.openapitools.model.Hike
 import org.openapitools.model.HikesResponse
+// import org.openapitools.model.HikeResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
 
@@ -51,4 +52,19 @@ class HikesController : HikesApi {
             ),
         )
     }
+
+  /*  override fun getHike(hikeId: kotlin.Long): ResponseEntity<HikeResponse> {
+        return ResponseEntity.ok(
+            HikeResponse(
+                Hike(
+                    id = 0,
+                    name = "Black forest - 🇩🇪",
+                    length = 70.8,
+                    thumbnail = "https://i.imgur.com/9c6DEkO.jpg",
+                    unit = Hike.Unit.Kilometer,
+                ),
+            ),
+        )
+    }
+    */
 }
