@@ -40,7 +40,7 @@ const onClickHandler = async (hikeId: number) => {
 // const getHike = async (hikeId: number) => {
 //   const api = new HikeApi();
 //   try {
-//     const { hike } = await api.getHike({ hikeId });/
+//     const { hike } = await api.getHike({ hikeId });
 //     return hike;
 //   } catch (err) {
 //     const hike: Hike = {
