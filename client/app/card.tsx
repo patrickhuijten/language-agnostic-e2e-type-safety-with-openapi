@@ -43,13 +43,14 @@ const onClickHandler = async (hikeId: number) => {
 //     const { hike } = await api.getHike({ hikeId });
 //     return hike;
 //   } catch (err) {
-//     const hike: Hike = {
-//       id: 1,
-//       name: "Test Hike",
-//       length: 10,
-//       unit: "Kilometer",
-//       thumbnail: "https://via.placeholder.com/400x300.png?text=Test+Hike",
-//     };
-//     return hike;
+//     return placeholderHike;
 //   }
 // };
+
+// const placeholderHike: Hike = {
+//   id: 1,
+//   name: "Test Hike",
+//   length: 10,
+//   unit: "Kilometer",
+//   thumbnail: "https://via.placeholder.com/400x300.png?text=Test+Hike",
+// }
